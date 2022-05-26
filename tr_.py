@@ -3,11 +3,6 @@ b = int(input("b sayısını giriniz: ")) #b ve c değerlerini girdi olarak alı
 c = int(input("c sayısını giriniz: "))
 print("\nOluşturduğunuz denklem: x² +", b, "x +", c, "= 0")
 
-if b == 0: #eğer b=0 ise yani denklem x² + c = 0 formundaysa ve c <= 0 ise (çünkü c 0'dan büyük olursa karekök x negatif bir sayıya eşit olur bu durumda x reel olmaz) çakışık iki kök vardır ve bunlar c'nin kareköküne eşittir.
-    if c <= 0:
-        print("\nDenklemin iki çakışık kökü vardır ve bunlar √" + str(-c) + "'e eşittir.")
-        exit()
-
 c_carpanlari = [] #c'nin çarpanlarını içeren bir dizi oluşturuyoruz
 
 if c > 0: #c pozitif ise
@@ -86,5 +81,5 @@ for i in range(0, len(c_carpanlari) // 2): #i'yi 0'dan c_carpanları dizisinin u
 if('kok1' and 'kok2' in locals()): #eğer kok1 ve kok2 adında değişkenler varsa kök bulduk demektir. Kökleri yazdırıyoruz
     print("\nDenklemin kökleri: x₁ = ", kok1, ",  x₂ = ", kok2, "\n")
     
-else: #eğer kok1 ve kok2 adında değişkenlerimiz yoksa kök bulamadık demektir.
-    print("\nDenklemin reel sayılar kümesinde kökü yoktur.")
+else: #eğer kok1 ve kok2 adında değişkenlerimiz yoksa tam sayı olan kök bulamadık demektir.
+    print("\nDenklemin tam sayılar kümesinde kökü yoktur.")
