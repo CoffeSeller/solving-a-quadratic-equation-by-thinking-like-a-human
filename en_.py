@@ -3,11 +3,6 @@ b = int(input("please enter b: "))
 c = int(input("please enter c: "))
 print("\nEquation that you just created: x² +", b, "x +", c, "= 0")
 
-if b == 0: #if b=0 so equation like this: x² + c = 0 and c <= 0, (because if c>0, x will be equal to square root of a negative number so there will no roots in real numbers) There is two coincident roots and they are equal to square root of -c.
-    if c <= 0:
-        print("\nThere is two coincident roots and they are equal to √" + str(-c))
-        exit()
-
 multipliers_c = []
 #finding multipliers of c
 if c > 0:
@@ -25,7 +20,7 @@ else: #if c=0
     exit()
 
 
-#From here on there is something about setting negative and positive multipliers for negative values ​​of c, which is hard to explain.
+#From here on there is something about setting negative and positive multipliers for negative values of c, which is hard to explain.
 multipliers_c_with_opposite_signs = [-x for x in multipliers_c] 
 
 c_1 = multipliers_c[:len(multipliers_c)//2]
@@ -75,4 +70,4 @@ if('root1' and 'root2' in locals()):
     print("\nRoots of equation are: x₁ = ", root1, ",  x₂ = ", root2, "\n")
     
 else:
-    print("\nThere is no roots in real numbers.")
+    print("\nThere is no roots in integers.")
